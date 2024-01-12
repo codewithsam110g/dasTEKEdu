@@ -9,7 +9,7 @@ export default function Navbar() {
     }
     return (
         <>
-            <nav className=' sm:justify-around  md:justify-around  lg:justify-around  xl:justify-around  p-2 mt-2 flex justify-between  shadow-sm'>
+            <nav className=' sm:justify-around  md:justify-around  lg:justify-around  xl:justify-around  p-2 mt-2 flex justify-between  shadow-lg'>
                 <div className='text-2xl  font-bold' >dasTekEdu</div>
                 <div className='hidden sm:block md:block lg:block xl:block'>
                     <div className='text-gray-500 font-semibold mt-2 flex space-x-6'>
