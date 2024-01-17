@@ -5,7 +5,7 @@ export default function Feautures() {
         <>
             <div className='mx-6 mt-8'>
                 <div className='mx-auto'>
-                    <center id='text' className='font-bold m-5 underline text-4xl' >Chatbots</center>
+                    <center id='text' className='font-bold m-5 h-14 underline text-4xl' >Chatbots</center>
                     <div className=''>
                         <div id='img' className='grid sm:flex'>
                         <div class=" m-auto max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

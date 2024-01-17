@@ -8,7 +8,7 @@ export default function Hero() {
       <div className='mx-6'>
       <div className='sm:flex sm:justify-around sm:mt-11 sm:flex-1 md:flex md:justify-around md:mt-11 md:flex-1 lg:flex lg:justify-around lg:mt-11 lg:flex-1'>
           <div className=''>
-            <div id='text' className='text-7xl  sm:text-8xl font-bold overflow-y-scroll no-scrollbar'>
+            <div id='text' className='text-7xl h-96 sm:text-8xl font-bold overflow-y-scroll no-scrollbar'>
               CUSTOM GPT <br/> FOR YOUR <br/>STUDIES 
             </div>
             <span className='text-gray-700 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iste nulla<br />  vitae repellendus beatae deleniti suscipit rerum velit, sequi corporis laborum,<br />  .</span>
