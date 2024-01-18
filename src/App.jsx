@@ -4,6 +4,7 @@ import ChatBots from "./pages/ChatBots";
 import Home from "./pages/Home";
 import { Routes,Route } from "react-router-dom";
 import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/chatbots" element={<ChatBots/>} />
         <Route path="/login" element={<LogIn/>} />
+        <Route path="/signup" element={<SignUp/>} />
       </Routes>
       <Fotter/>
    </>
