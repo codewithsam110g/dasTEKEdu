@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -10,10 +11,10 @@ export default function Navbar() {
     return (
         <>
             <nav className=' sm:mb-0 mb-10 sm:justify-around  md:justify-around  lg:justify-around  xl:justify-around  p-2 mt-2 flex justify-between  shadow-xl'>
-                <div className='text-2xl  font-bold' >dasTEkEdu </div>
+                <div className='text-2xl  font-bold' ><Link to ={'/'}>dasTEkEdu</Link> </div>
                 <div className='hidden sm:block md:block lg:block xl:block'>
                     <div className='text-gray-500 font-semibold mt-2 flex space-x-6'>
-                        <div>ChatBots </div>
+                        <Link to={'/chatbots'}><div>ChatBots </div></Link>
                         <div>Threads </div>
                         <div>Pricing</div>
                     </div>
