@@ -1,33 +1,18 @@
-import React from 'react'
-import { GiBulletBill } from "react-icons/gi";
+import { Link } from 'react-router-dom'
+import img from '../../assets/img.jpg'
 
+export default function Cardchart({ url, title, desc ,to}) {
 
-export default function Cardchart({ url, title, desc }) {
   return (
-    <div id='text' className=' shadow-2xl  border border-x-black m-2 rounded-xl grid sm:flex  mb-10'>
-      <div><img src={url} className=' w-[450px] s sm:w-[600px] h-auto rounded-lg ' /></div>
-      <div className='flex items-center justify-between'>
-        <div className='text-center'>
-        <div className='mb-6'>
-        <h1 className='text-2xl m-4 mb-0 font-semibold italic underline'>{title}</h1>
-          <p className="text-gray-400 m-2" >Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <>
+      <section className='m-6 shadow-xl bg-gray-100 p-3'>
+        <img src={url || img} className='rounded-lg' />
+        <div className=''>
+          <h3 className='text-xl font-bold mt-3'>{title || "Maths"} problem</h3>
+          <p className='text-base font-semibold text-gray-700 pl-2'>slove your problem{desc || ""}</p>
+         <Link to={to || ""}> <button className='bg-gray-700 rounded-lg text-lg text-black font-bold p-1 m-3'>Solve now</button></Link>
         </div>
-          <ul>
-            <li className='flex  items-center justify-center gap-2 ml-4 m-2'><GiBulletBill />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. m-2 Consequatur, assumenda!</li>
-            <li className='flex  items-center justify-center gap-2 ml-4 m-2'><GiBulletBill />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. m-2 Consequatur, assumenda!</li>
-            <li className='flex  items-center justify-center gap-2 ml-4 m-2'><GiBulletBill />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. m-2 Consequatur, assumenda!</li>
-            <li className='flex  items-center justify-center gap-2 ml-4 m-2'><GiBulletBill />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. m-2 Consequatur, assumenda!</li>
-           
-          </ul>
-          <button className='mx-6 bg-gray-700 rounded-md text-xl italic p-2 m-3'>Chat now </button>
-        </div>
-      </div>
-
-    </div>
-
+      </section>
+    </>
   )
 }

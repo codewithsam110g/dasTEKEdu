@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div className='text-2xl  font-bold' ><Link to ={'/'}>dasTEkEdu</Link> </div>
                 <div className='hidden sm:block md:block lg:block xl:block'>
                     <div className='text-gray-500 font-semibold mt-2 flex space-x-6'>
-                        <Link to={'/chatbots'}><div>ChatBots </div></Link>
+                        <Link to={'/HOMEWORK-HELP'}><div>HOMEWORK HELP</div></Link>
                         <div>Threads </div>
                         <div>Pricing</div>
                     </div>
