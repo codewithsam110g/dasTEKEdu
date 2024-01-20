@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { Routes,Route } from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
+import Chatbot from "./pages/Chatbot";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/HOMEWORK-HELP" element={<HOMEWORKHELP/>} />
         <Route path="/login" element={<LogIn/>} />
         <Route path="/signup" element={<SignUp/>} />
+        <Route path="/chatbot" element={<Chatbot/>} />
       </Routes>
       <Fotter/>
    </>
