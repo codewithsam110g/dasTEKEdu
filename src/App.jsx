@@ -6,7 +6,7 @@ import { Routes,Route } from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import Chatbot from "./pages/Chatbot";
-import GeneralChatnot from "./pages/GeneralChatnot";
+import GeneralChatbot from "./pages/GeneralChatbot";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/login" element={<LogIn/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/chatbot" element={<Chatbot/>} />
-        <Route path="/gen-chatbot" element={<GeneralChatnot/>} />
+        <Route path="/gen-chatbot" element={<GeneralChatbot/>} />
       </Routes>
       <Fotter/>
    </>

@@ -4,6 +4,7 @@ import Cardchart from '../components/chatbot/Card-chart';
 import { Link as ScrollLink } from 'react-scroll';
 
 
+
 export default function HOMEWORKHELP() {
     return (
         <>
@@ -19,7 +20,7 @@ export default function HOMEWORKHELP() {
                                 Undergraduation
                             </li>
                         </ScrollLink>
-                        <li className='bg-black py-3 px-3 h-12 rounded-lg'>General </li>
+                        <a href='/gen-chatbot'><li className='bg-black py-3 px-3 h-12 rounded-lg'>General </li></a>
                     </ul>
                 </center>
                 <div className='mx-8 shadow-2xl   '>

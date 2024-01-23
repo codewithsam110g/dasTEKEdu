@@ -40,7 +40,7 @@ const ChatComponent = ({ endpoint }) => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-200">
+    <div className="flex flex-col h-[80vh] bg-gray-200 sticky sm:h-[88vh]">
       <div className="overflow-auto p-3 flex-grow">
         {messages.map((msg, index) => (
           <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
