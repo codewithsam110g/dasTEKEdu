@@ -15,7 +15,7 @@ export default function Navbar() {
                 <div className='hidden sm:block md:block lg:block xl:block'>
                     <div className='text-gray-500 font-semibold mt-2 flex space-x-6'>
                         <Link to={'/HOMEWORK-HELP'}><div>HOMEWORK HELP</div></Link>
-                        <div>Threads </div>
+                        <Link to={'/threads'}><div>Threads </div></Link>
                         <div>Pricing</div>
                     </div>
                 </div>
