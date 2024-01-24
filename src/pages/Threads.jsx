@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Dialog } from '@headlessui/react';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 const DiscussionPage = () => {
   const fileInputRef = useRef(null);
@@ -184,8 +185,10 @@ const DiscussionPage = () => {
         </div>
       </div>
       {/* Discussions list */}
+      
       <div>
         {discussions.map((discussion) => (
+          <Link to={`/threads/threads.id`}>
           <div key={discussion.id} className="flex flex-row justify-between items-center py-4 border-b border-gray-300">
             <div className="flex-grow">
               <h3 className="text-lg font-semibold">{discussion.title}</h3>
@@ -199,8 +202,10 @@ const DiscussionPage = () => {
               <span className="text-sm text-gray-500">{discussion.views} views</span>
             </div>
           </div>
+          </Link>
         ))}
       </div>
+      
       {/* Tags section */}
       <div className="w-1/4">
         {/* Tags would go here */}

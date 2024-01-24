@@ -62,7 +62,7 @@ const PhotoUploadComponent = () => {
             <div className='border flex align-middle  justify-around p-1  border-gray-900 rounded-3xl h-16'>
             <div className=" border  rounded-lg ">
                    
-                   <input
+                   <inputx
                        type="file"
                        ref={fileInputRef}
                        onChange={handleFilechange}

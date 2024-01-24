@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp";
 import Chatbot from "./pages/Chatbot";
 import GeneralChatbot from "./pages/GeneralChatbot";
 import Threads from "./pages/Threads";
+import IndividualThread from "./pages/IndividualThread";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/chatbot" element={<Chatbot/>} />
         <Route path="/gen-chatbot" element={<GeneralChatbot/>} />
+        <Route path='/threads/threads.id' element={<IndividualThread/>} />
       </Routes>
       <Fotter/>
    </>
