@@ -2,12 +2,14 @@ import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Cardchart from '../components/chatbot/Card-chart';
 import { Link as ScrollLink } from 'react-scroll';
+import Navbar from '../components/Navbar';
 
 
 
 export default function HOMEWORKHELP() {
     return (
         <>
+         <Navbar/>
             <main className='mx-6'>
                 <center>
                     <h1 id='img' className='flex underline align-middle justify-center m-4 text-2xl sm:text-4xl h-16 font-bold mt-6'>HOMEWORK-HELP </h1>

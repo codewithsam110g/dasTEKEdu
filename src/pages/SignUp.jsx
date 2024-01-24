@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 export default function SignUp() {
   return (
     <>
+     <Navbar/>
      <div className='my-10 justify-center items-center grid '>
         <h1 className='font-bold text-3xl h-10'>Get started for free </h1>
         <br />

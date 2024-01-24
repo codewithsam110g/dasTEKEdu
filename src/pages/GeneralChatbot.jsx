@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
 
 const ChatComponent = ({ endpoint }) => {
   const [messages, setMessages] = useState([
@@ -40,6 +41,8 @@ const ChatComponent = ({ endpoint }) => {
   };
 
   return (
+   <>
+   <Navbar/>
     <div className="flex flex-col h-[80vh] bg-gray-200 sticky sm:h-[88vh]">
       <div className="overflow-auto p-3 flex-grow">
         {messages.map((msg, index) => (
@@ -69,6 +72,7 @@ const ChatComponent = ({ endpoint }) => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

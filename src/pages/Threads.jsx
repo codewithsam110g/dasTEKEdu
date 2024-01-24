@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Dialog } from '@headlessui/react';
+import Navbar from '../components/Navbar';
 
 const DiscussionPage = () => {
   const fileInputRef = useRef(null);
@@ -105,8 +106,10 @@ const DiscussionPage = () => {
 
 
   return (
+   <>
+  <Navbar/>
     <div className="container mx-auto mt-4 p-4 bg-white shadow-lg rounded">
-      {/* Modal for new discussion */}
+          {/* Modal for new discussion */}
       <Dialog open={isModalOpen} onClose={closeModal} className="fixed z-10 inset-0 overflow-y-auto">
         <div className="flex items-center justify-center min-h-screen">
           <Dialog.Overlay className="f bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -203,6 +206,7 @@ const DiscussionPage = () => {
         {/* Tags would go here */}
       </div>
     </div>
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ import { FaCopy } from "react-icons/fa";
 
 
 
-const CHATBOT= () => {
+const PhotoUploadComponent = () => {
     const [inputValue, setInputValue] = useState('');
     const [selectedFile, setSelectedFile] = useState(null);
     const [loading, setLoading] = useState(false);
