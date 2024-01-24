@@ -173,15 +173,17 @@ const DiscussionPage = () => {
       <div className="flex flex-row justify-between mb-4">
         {/* Tabs */}
         <div className="flex">
-          <div className="mr-2 px-4 py-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-t">All Interview Questions</div>
+          <div className="mr-2 px-4 py-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-t">
+              Discusions
+          </div>
           {/* More tabs... */}
         </div>
         {/* Search box */}
         <div>
-          <input type="text" placeholder="Search topics or comments..." className="px-4 py-2 border rounded" />
+          <input type="text" placeholder="Search question" className="px-4 py-2 border rounded" />
         </div>
         <div>
-          <button onClick={openModal} className="px-3 bg-black rounded-lg text-white h-10">New </button>
+          <button onClick={openModal} className="px-3 bg-black rounded-lg text-white h-10">Post </button>
         </div>
       </div>
       {/* Discussions list */}
@@ -194,12 +196,12 @@ const DiscussionPage = () => {
               <h3 className="text-lg font-semibold">{discussion.title}</h3>
               <p className="text-sm text-gray-600">Created at: {discussion.createdDate} | Last Reply: {discussion.lastReplyDate}</p>it
               <div className="flex mt-2">
-                {discussion.tags.map(tag => <span key={tag} className="text-sm text-blue-700 bg-blue-50 rounded-full px-2 mr-2">{tag}</span>)}
+                {discussion.tags.map(tag => <span key={tag} className="text-sm text-white p-1 bg-gray-700 rounded-full px-2 mr-2">{tag}</span>)}
               </div>
             </div>
             <div className="flex flex-col items-end">
-              <span className="text-sm font-semibold">{discussion.replies} replies</span>
-              <span className="text-sm text-gray-500">{discussion.views} views</span>
+              <span className="text-sm font-semibold">{discussion.replies} coments</span>
+              <span className="text-sm text-gray-500">{discussion.views} s</span>
             </div>
           </div>
           </Link>

@@ -11,12 +11,12 @@ export default function Navbar() {
     return (
         <>
             <nav className=' sm:mb-0 mb-10 sm:justify-around  md:justify-around  lg:justify-around  xl:justify-around  p-2 mt-2 flex justify-between  shadow-xl'>
-                <div className='text-2xl  font-bold' ><Link to ={'/'}>dasTEkEdu</Link> </div>
+                <div className='text-2xl  font-bold' ><Link to={'/'}>dasTEkEdu</Link> </div>
                 <div className='hidden sm:block md:block lg:block xl:block'>
                     <div className='text-gray-500 font-semibold mt-2 flex space-x-6'>
                         <Link to={'/HOMEWORK-HELP'}><div>HOMEWORK HELP</div></Link>
                         <Link to={'/threads'}><div>Threads </div></Link>
-                        <div>Pricing</div>
+
                     </div>
                 </div>
                 <div onClick={handleonclick} className='align-middle justify-center block sm:hidden'>
@@ -37,12 +37,12 @@ export default function Navbar() {
                 </div>
 
                 <div className='hidden sm:block md:block lg:block xl:block flex space-x-4 '>
-                  <Link to={'/login'}>
-                  <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">Login</button>
-                  </Link>
-                  <Link to={'/signup'}>
-                  <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">signup</button>
-                  </Link>
+                    <Link to={'/login'}>
+                        <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">Login</button>
+                    </Link>
+                    <Link to={'/signup'}>
+                        <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">signup</button>
+                    </Link>
                 </div>
             </nav>
             <div className='align-middle justify-center block sm:hidden'    >
@@ -50,12 +50,15 @@ export default function Navbar() {
                     onclick ?
                         <div className='absolute z-10  w-full bg-white text-gray-500 font-semibold mt-2 grid space-x-6'>
                             <center className='space-x-6'>
-                                <div className='m-6 text-2xl'>Features </div>
-                                <div className='m-6 text-2xl'>Pricing  </div>
-                                <div className='m-6 text-2xl'>Demo </div>
-                                <div  className='grid w-64'>
-                                    <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">Login</button>
-                                    <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">signup</button>
+                                <Link to={'/HOMEWORK-HELP'}><div>HOMEWORK HELP</div></Link>
+                                <Link to={'/threads'}><div>Threads </div></Link>
+                                <div className='grid w-64 mt-8'>
+                                    <Link to={'/login'}>
+                                        <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">Login</button>
+                                    </Link>
+                                    <Link to={'/signup'}>
+                                        <button type="button" className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:    ring-gray-700 dark:border-gray-700 capitalize">signup</button>
+                                    </Link>
                                 </div>
                             </center>
                         </div>

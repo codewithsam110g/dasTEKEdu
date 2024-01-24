@@ -79,35 +79,15 @@ const [messages, setMessages]= useState([{
   return (
     <>
       <Navbar />
-      <section className='m-8 border  border-gray-60 rounded-2xl p-3  shadow-2xl'>
+      <section className='m-8 border border-gray-60 rounded-2xl p-3  shadow-2xl'>
         <div className='border border-gray-500 rounded-lg p-3 border-solid'>
           <h1 className=' text-gray-900 font-semibold text-2xl p-1'><u className=' font-bold'>Question-</u> {ThreadInfo.title}</h1>
-          <h2 className='p-3 font-semibold'><u className='text-gray-700 font-bold'>Description-</u>{ThreadInfo.description}</h2>
-
+          <h2 className='p-3 font-semibold'><u className='text-gray-700 font-bold'>Description-</u>{ThreadInfo.description}</h2>s
           {ThreadInfo.tags.map(tag => <span key={tag} className="text p-3 m-3 font-semibold  text-gray-700 bg-blue-50 rounded-lg px-2 mr-2">{tag}</span>)}
           <img className='h-[300px] m-3 roudned' src={ThreadInfo.imageUrl} />
           <div>
             
-             <div className="overflow-auto p-3 flex-grow">
-          {messages.map((msg, index) => (
-            <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`rounded-lg px-4 py-2 my-1 ${msg.sender === 'user' ? 'bg-black text-white' : 'bg-white'}`}>
-                {msg.text}
-                {
-                  (msg.sender === 'server') &&  (msg.text !== 'HI WELCOME BACL TO HERE DASTEK EDU YOU CAN ASK ANY QUESTIONS HERES') &&
-                  <div className='flex gap-x-10 mt-5'>
-                    <BiSolidLike size={20} />
-                    <BiSolidDislike size={20} />
-                    <FaCopy size={20} />
-                    <FaShareFromSquare size={20} />
-                  </div>
-
-                }
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex rounded-lg border-2 border-gray-300 overflow-hidden">
+        <div className="flex rounded-lg border-2 sticky border-gray-300 overflow-hidden">
             <input
               type="file"
               ref={fileInputRef}
