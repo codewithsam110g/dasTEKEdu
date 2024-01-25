@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/gen-chatbot" element={<GeneralChatbot />} />
-          <Route path="/threads/threads.id" element={<IndividualThread />} />
+          <Route path="/threads/:id" element={<IndividualThread />} />
         </Routes>
         <Fotter />
       </UserAuthContextProvider>
