@@ -33,7 +33,7 @@ export default function App() {
           <Route path="/gen-chatbot" element={<GeneralChatbot />} />
           <Route path="/threads/:threadId" element={<IndividualThread />} />
         </Routes>
-        <Fotter />
+        {/* <Fotter /> */}
       </UserAuthContextProvider>
     </>
   );
