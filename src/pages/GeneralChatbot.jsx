@@ -13,7 +13,15 @@ const ChatComponent = ({ endpoint }) => {
   const fileInputRef = useRef(null);
   const [askMsg, setAskMsg] = useState(false);
   const [file, setFile] = useState(null);
+  const [filedata , setfiledata] = useState(null)
+  const [imageUrl, setImageUrl] = useState(null);
+    
 
+  useEffect(() => {
+    if (filedata) {
+      setImageUrl(URL.createObjectURL(filedata));
+    }
+  }, [filedata]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -73,6 +81,7 @@ const ChatComponent = ({ endpoint }) => {
   }, [askMsg]);
 
   const handleFilechange = (event) => {
+    setfiledata(event.target.files[0])
     setFile(event.target.files[0]);
     console.log(event.target.files);
   };
@@ -88,8 +97,9 @@ const ChatComponent = ({ endpoint }) => {
 
   const sendMessage = async () => {
     if (inputValue.trim()) {
-      const userMessage = { text: inputValue, sender: "user" };
+      const userMessage = { image :filedata ,text: inputValue, sender: "user" };
       setMessages((prevMessages) => [...prevMessages, userMessage]);
+      
 
       try {
         const { data } = await axios.post(
@@ -113,6 +123,7 @@ const ChatComponent = ({ endpoint }) => {
       }
 
       setInputValue(""); // Clear the input after sending
+      setfiledata('')
     }
   };
 
@@ -129,21 +140,26 @@ const ChatComponent = ({ endpoint }) => {
               }`}
             >
               <div
-                className={`rounded-lg px-4 py-2 my-1 ${
+                className={`rounded max-w-[75vw]  ${msg.sender !=="user" ? "min-w-[75vw]":""} px-4 py-2  ${
                   msg.sender === "user" ? "bg-black text-white" : "bg-white"
                 }`}
               >
-                <MathJaxComponent content={msg.text} />
+                <MathJaxComponent content={msg.text}/>
+               
               </div>
             </div>
           ))}
         </div>
         <div className="p-3 bg-white flex-none">
+                
           <div className="flex rounded-lg border-2 border-gray-300 overflow-hidden">
+         
             <input
               type="file"
               ref={fileInputRef}
-              onChange={handleFilechange}
+              onChange={handleFilechange }
+             
+                
               style={{ display: "none" }} // Hide the file input
               className="block  text-sm text-gray-500
                   file:mr-4 file:py-2 file:px-4
@@ -153,20 +169,24 @@ const ChatComponent = ({ endpoint }) => {
                   hover:file:bg-blue-100 m-"
               multiple // Remove this if you want only single file selection
             />
+            <center>
             <button
               onClick={triggerFileInput}
-              className="py-2 px-4 rounded-full h-10 bg-black text-white font-semibold m-1  text-sm"
+              className={` bg-black text-white px-4  py-2 ${inputValue.length>12 ?"h-[70px]":""} `}
             >
               <MdAddToPhotos />
             </button>
-            <input
-              type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              className="w-full p-2 outline-none"
-              placeholder="Type a message..."
-              onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-            />
+            </center>
+            
+             <input
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+          className={`w-full p-2 outline-none ${inputValue.length>12 ?"h-[70px]":""}`} 
+            placeholder="Type a message..."
+            // onKeyPress={(e) => e.key === "Enter" && sendMessage()}
+          />
+          
             <button
               onClick={sendMessage}
               className=" bg-black text-white px-4 py-2 focus:outline-none"
